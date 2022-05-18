@@ -6,23 +6,25 @@
 
 import random
 
+
 def main():
-    # this function displays 10 random number with the array
+    # this function finds the average of arrays
 
-    my_numbers = []
+    counter = 0
+    counter2 = 0
     average = 0
-
-    for loop_counter in range(0, 10):
-        a_number = random.randint(1, 100)
-        my_numbers.append(a_number)
-        average = average + my_numbers[loop_counter]
-        print("The random number is: {0} ".format(my_numbers[loop_counter]))
-    print("")
-    average = average / 10
-    print("The average is {0}".format(average))
+    random_numbers = []
+    # process & output
+    for counter in range(0, 10):
+        random_number = random.randint(1, 100)
+        random_numbers.append(random_number)
+        print("The random number is: {0}.".format(random_number))
+    for counter2 in range(len(random_numbers)):
+        average = random_numbers[counter2] + average
+    average = average / len(random_numbers)
+    print("\nThe average is {0}.".format(average))
     print("\nDone.")
 
 
 if __name__ == "__main__":
     main()
-
